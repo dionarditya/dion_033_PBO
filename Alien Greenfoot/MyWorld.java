@@ -24,17 +24,11 @@ public class MyWorld extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
-    private void prepare()  
+    private void prepare()
     {
-        Hiro hiro = new Hiro(); 
-        addObject(hiro,107,103);
+        Hero hero = new Hero();
+        addObject(hero,100,100);
 
-        Hiro dion = new Hiro();
-        addObject(dion,200,50);
-
-
-    
-    
-        
+        hero.setLocation(78,194);
     }
 }
