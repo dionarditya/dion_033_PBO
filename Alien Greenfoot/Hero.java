@@ -21,28 +21,29 @@ public class Hero extends Actor
     {
         if(Greenfoot.isKeyDown("w"))
         {
-            move(2);
+             setLocation(getX(),getY()-2);
         }
         
         if(Greenfoot.isKeyDown("s"))
         {
-            move(-2);
+             setLocation(getX(),getY()+2);
         }
         
         if(Greenfoot.isKeyDown("a"))
         {
-            turn(-2);
+             setLocation(getX()-2,getY());
         }
     
         if(Greenfoot.isKeyDown("d"))
         {
-            turn(2);
+             setLocation(getX()+2,getY());
         }
         
         if(Greenfoot.isKeyDown("space"))
         {
             move(4);
         }
+    
 
     }
 }
