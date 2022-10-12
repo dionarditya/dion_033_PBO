@@ -14,11 +14,37 @@ public class Hiro extends Actor
      */
     public void act()
     {
-        // Add yoMOVEur action code here.
-        move(7);
+        // Add your action code here.
         
-        
-        if (isAtEdge())
-            setLocation(0, getY());
+        //move(2);
+        //if (isAtEdge())
+           //setLocation(0,getY());
+        gerak();
+        shootLayer();
     }
+    public void gerak()
+    {
+        if(Greenfoot.isKeyDown("w"))
+        setLocation(getX(),getY()-2);
+        
+        if(Greenfoot.isKeyDown("s"))
+        setLocation(getX(),getY()+2);
+        
+        if(Greenfoot.isKeyDown("d"))
+        setLocation(getX()+5,getY());
+        
+        if(Greenfoot.isKeyDown("a"))
+        setLocation(getX()-5,getY());
+    }
+     int laserTimer = 0;
+     public void shootLayer(){
+         if(laserTimer == 30){
+             getWorld(). addObject(new Laser(),getX()+10,getY());
+              laserTimer = 0;
+            
+         }else{
+             laserTimer++;
+            }
+     }
+     
 }
